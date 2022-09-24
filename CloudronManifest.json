@@ -1,0 +1,18 @@
+{
+  "id": "io.github.conflict-investigations.media-search-egine.cloudronapp",
+  "title": "Media Search Engine",
+  "author": "conflict-investigations",
+  "description": "file://DESCRIPTION.md",
+  "tagline": "Search for URLs in databases",
+  "version": "0.0.1",
+  "upstreamVersion": "0.0.1",
+  "healthCheckPath": "/",
+  "httpPort": 8000,
+  "minBoxVersion": "7.1.0",
+  "addons": {
+    "localstorage": {}
+  },
+  "memoryLimit": 1000000000,
+  "manifestVersion": 2,
+  "website": "https://github.com/conflict-investigations/media-search-engine"
+}
