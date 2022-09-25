@@ -14,13 +14,13 @@
   "httpPort": 8000,
   "minBoxVersion": "7.1.0",
   "addons": {
-    "localstorage": {}
-  },
-  "scheduler": {
-      "update_db": {
-          "schedule": "0 */2 * * *",
-          "command": "/app/code/.venv/bin/media_search -o"
-      }
+    "localstorage": {},
+    "scheduler": {
+        "update_db": {
+            "schedule": "0 */2 * * *",
+            "command": "/app/code/.venv/bin/media_search -o"
+        }
+    }
   },
   "memoryLimit": 1000000000,
   "manifestVersion": 2,
