@@ -7,6 +7,10 @@
   "version": "0.0.1",
   "upstreamVersion": "0.0.1",
   "healthCheckPath": "/",
+  "logPaths": [
+    "/run/app/gunicorn-access.log",
+    "/run/app/gunicorn-error.log"
+  ],
   "httpPort": 8000,
   "minBoxVersion": "7.1.0",
   "addons": {
