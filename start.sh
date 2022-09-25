@@ -12,7 +12,6 @@ chmod -R 774 /run/app/gunicorn/
 
 echo "=> Ensuring permissions"
 chown -Rh cloudron:cloudron /app/data
-chown -Rh cloudron:cloudron /app/code
 
 echo "=> Fetching files from the internet"
 /usr/local/bin/gosu cloudron:cloudron media_search -o
