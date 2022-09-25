@@ -12,6 +12,7 @@ chmod -R 774 /var/log/gunicorn/
 
 mkdir -p /run/app/
 ln -sf /var/log/gunicorn /run/app/gunicorn
+chown -Rh cloudron:cloudron /run/app/gunicorn/
 
 echo "=> Ensuring permissions"
 chown -Rh cloudron:cloudron /app/data
