@@ -16,8 +16,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip3 install flask gunicorn
 RUN pip3 install -e .
 
-COPY start.sh /app/code
-
-WORKDIR /app/data
 EXPOSE 8000
+WORKDIR /app/data
+
+COPY start.sh /app/code
 CMD [ "/app/code/start.sh" ]
