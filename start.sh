@@ -6,13 +6,9 @@ cd /app/data
 mkdir -p data/ dump/
 
 # Create temporary log dir
-mkdir -p /var/log/gunicorn/
-chown -Rh cloudron:cloudron /var/log/gunicorn/
-chmod -R 774 /var/log/gunicorn/
-
-mkdir -p /run/app/
-ln -sf /var/log/gunicorn /run/app/gunicorn
+mkdir -p /run/app/gunicorn/
 chown -Rh cloudron:cloudron /run/app/gunicorn/
+chmod -R 774 /run/app/gunicorn/
 
 echo "=> Ensuring permissions"
 chown -Rh cloudron:cloudron /app/data
@@ -26,6 +22,6 @@ exec /usr/local/bin/gosu cloudron:cloudron \
     ${VIRTUAL_ENV}/bin/gunicorn \
         -b 0.0.0.0:8000 \
         -w 2 \
-        --access-logfile /var/log/gunicorn/gunicorn-access.log \
-        --error-logfile /var/log/gunicorn/gunicorn-error.log \
+        --access-logfile /run/app/gunicorn/gunicorn-access.log \
+        --error-logfile /run/app/gunicorn/gunicorn-error.log \
         'media_search.web:app'
