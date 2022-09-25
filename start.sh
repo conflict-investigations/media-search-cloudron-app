@@ -13,8 +13,9 @@ chmod -R 774 /run/app/gunicorn/
 echo "=> Ensuring permissions"
 chown -Rh cloudron:cloudron /app/data
 
-echo "=> Fetching files from the internet"
-/usr/local/bin/gosu cloudron:cloudron media_search -o
+# Disabled since the scheduler schould take care of this for us
+# echo "=> Fetching files from the internet"
+# /usr/local/bin/gosu cloudron:cloudron media_search -o
 
 echo "=> Starting web app"
 exec /usr/local/bin/gosu cloudron:cloudron \
