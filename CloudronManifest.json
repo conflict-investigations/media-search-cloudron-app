@@ -16,6 +16,12 @@
   "addons": {
     "localstorage": {}
   },
+  "scheduler": {
+      "update_db": {
+          "schedule": "0 */2 * * *",
+          "command": "/app/code/.venv/bin/media_search -o"
+      }
+  },
   "memoryLimit": 1000000000,
   "manifestVersion": 2,
   "website": "https://github.com/conflict-investigations/media-search-engine"
