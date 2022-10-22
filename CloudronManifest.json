@@ -4,7 +4,7 @@
   "author": "conflict-investigations",
   "description": "file://DESCRIPTION.md",
   "tagline": "Search for URLs in databases",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "upstreamVersion": "0.0.1",
   "healthCheckPath": "/",
   "logPaths": [
