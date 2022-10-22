@@ -18,5 +18,9 @@ RUN pip3 install -e .
 
 EXPOSE 8000
 
+LABEL org.opencontainers.image.source=https://github.com/osintukraine/media-search-cloudron-app
+LABEL org.opencontainers.image.description="Geolocation DB Search - Cloudron app"
+LABEL org.opencontainers.image.licenses=MIT
+
 COPY start.sh /app/pkg
 CMD [ "/app/pkg/start.sh" ]
