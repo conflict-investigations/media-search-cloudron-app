@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -eu
+
+mkdir -p /app/data
 cd /app/data
 
 mkdir -p data/ dump/

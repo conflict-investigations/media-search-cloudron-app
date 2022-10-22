@@ -1,6 +1,6 @@
 FROM cloudron/base:3.2.0@sha256:ba1d566164a67c266782545ea9809dc611c4152e27686fd14060332dd88263ea
 
-RUN mkdir -p /app/data /app/code
+RUN mkdir -p /app/code /app/pkg
 WORKDIR /app/code
 
 RUN curl -L https://github.com/conflict-investigations/media-search-engine/archive/master.tar.gz | tar -xzv -C /app/code --strip-components 1 -f -
@@ -17,7 +17,6 @@ RUN pip3 install flask gunicorn
 RUN pip3 install -e .
 
 EXPOSE 8000
-WORKDIR /app/data
 
-COPY start.sh /app/code
-CMD [ "/app/code/start.sh" ]
+COPY start.sh /app/pkg
+CMD [ "/app/pkg/start.sh" ]
